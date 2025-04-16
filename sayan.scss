@@ -1,0 +1,264 @@
+
+// SaiyanCSS - Base SASS file inspirado en Dragon Ball
+
+// 🎨 Paleta de colores Dragon Ball
+$color-goku: #f27d0c;
+$color-vegeta: #2e5aac;
+$color-piccolo: #8bc34a;
+$color-frieza: #d62828;
+$color-saiyan: #fdd835;
+$color-black: #1e1e1e;
+
+// ✍️ Tipografía base
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;
+  color: $color-black;
+  margin: 0;
+  padding: 0;
+}
+
+// 🔳 Container responsive
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+  padding: 1rem;
+}
+
+// 📐 Grid system básico
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+}
+
+.col {
+  flex: 1;
+  padding: 0.5rem;
+  min-width: 200px;
+}
+
+// 🔘 Botones
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-goku {
+  background-color: $color-goku;
+  color: white;
+}
+
+.btn-vegeta {
+  background-color: $color-vegeta;
+  color: white;
+}
+
+.btn-piccolo {
+  background-color: $color-piccolo;
+  color: white;
+}
+
+.btn-frieza {
+  background-color: $color-frieza;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+// 📢 Alertas
+.alert {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.alert-goku {
+  background-color: $color-saiyan;
+  color: $color-black;
+}
+
+.alert-vegeta {
+  background-color: $color-vegeta;
+  color: white;
+}
+
+.alert-piccolo {
+  background-color: $color-piccolo;
+  color: white;
+}
+
+.alert-frieza {
+  background-color: $color-frieza;
+  color: white;
+}
+
+// Utilidades básicas
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.shadow-saiyan {
+  box-shadow: 0 0 10px $color-saiyan;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+// 🃏 Tarjetas (Cards)
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.card-goku {
+  border-left: 6px solid $color-goku;
+}
+
+.card-vegeta {
+  border-left: 6px solid $color-vegeta;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+// 🧭 Navbar
+.navbar {
+  background-color: $color-goku;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 4px solid $color-vegeta;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-links a:hover {
+  color: $color-saiyan;
+}
+// 📝 Formularios
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid $color-piccolo;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fefefe;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: $color-saiyan;
+  box-shadow: 0 0 5px $color-saiyan;
+}
+// 🏷️ Badges
+.badge {
+  display: inline-block;
+  padding: 0.4em 0.7em;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.badge-saiyan {
+  background-color: $color-saiyan;
+  color: $color-black;
+}
+
+.badge-vegeta {
+  background-color: $color-vegeta;
+}
+
+.badge-piccolo {
+  background-color: $color-piccolo;
+}
+
+.badge-frieza {
+  background-color: $color-frieza;
+}
+// ⚡ Animación de transformación
+@keyframes transform-saiyan {
+  0% {
+    background-color: $color-black;
+    color: white;
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    background-color: $color-saiyan;
+    color: black;
+    transform: scale(1.2);
+    box-shadow: 0 0 20px $color-saiyan;
+  }
+  100% {
+    background-color: white;
+    color: $color-black;
+    transform: scale(1);
+    box-shadow: 0 0 10px $color-saiyan;
+  }
+}
+
+.transformed {
+  animation: transform-saiyan 1.2s ease-in-out;
+}

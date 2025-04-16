@@ -1,0 +1,248 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;
+  color: #1e1e1e;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+  padding: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+}
+
+.col {
+  flex: 1;
+  padding: 0.5rem;
+  min-width: 200px;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-goku {
+  background-color: #f27d0c;
+  color: white;
+}
+
+.btn-vegeta {
+  background-color: #2e5aac;
+  color: white;
+}
+
+.btn-piccolo {
+  background-color: #8bc34a;
+  color: white;
+}
+
+.btn-frieza {
+  background-color: #d62828;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.alert-goku {
+  background-color: #fdd835;
+  color: #1e1e1e;
+}
+
+.alert-vegeta {
+  background-color: #2e5aac;
+  color: white;
+}
+
+.alert-piccolo {
+  background-color: #8bc34a;
+  color: white;
+}
+
+.alert-frieza {
+  background-color: #d62828;
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.shadow-saiyan {
+  box-shadow: 0 0 10px #fdd835;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.card-goku {
+  border-left: 6px solid #f27d0c;
+}
+
+.card-vegeta {
+  border-left: 6px solid #2e5aac;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.navbar {
+  background-color: #f27d0c;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 4px solid #2e5aac;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #fdd835;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #8bc34a;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fefefe;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #fdd835;
+  box-shadow: 0 0 5px #fdd835;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.4em 0.7em;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.badge-saiyan {
+  background-color: #fdd835;
+  color: #1e1e1e;
+}
+
+.badge-vegeta {
+  background-color: #2e5aac;
+}
+
+.badge-piccolo {
+  background-color: #8bc34a;
+}
+
+.badge-frieza {
+  background-color: #d62828;
+}
+
+@keyframes transform-saiyan {
+  0% {
+    background-color: #1e1e1e;
+    color: white;
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    background-color: #fdd835;
+    color: black;
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #fdd835;
+  }
+  100% {
+    background-color: white;
+    color: #1e1e1e;
+    transform: scale(1);
+    box-shadow: 0 0 10px #fdd835;
+  }
+}
+.transformed {
+  animation: transform-saiyan 1.2s ease-in-out;
+}
+
+/*# sourceMappingURL=sayan.css.map */
