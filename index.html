@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Saiyan CSS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saiyan CSS - Librería personalizada</title>
   <link rel="stylesheet" href="sayan.css">
 </head>
-<body class="body">
+<body class="cuerpo-pagina">
 
-  <!-- Navbar -->
-  <nav class="saiyan-navbar">
-    <div class="saiyan-logo">SaiyanCSS</div>
-    <ul class="saiyan-nav-links">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Componentes</a></li>
-      <li><a href="#">Ejemplos</a></li>
-      <li><a href="#">Integrantes</a></li>
-      <li><a href="#">Paleta de Colores</a></li>
-    </ul>
+  <!-- 🔝 Barra de navegación -->
+  <nav class="barra-navegacion">
+    <div class="barra-logo">SaiyanCSS</div>
+    <div class="barra-enlaces">
+      <a href="#">Inicio</a>
+      <a href="#">Componentes</a>
+      <a href="#">Ejemplos</a>
+      <a href="#">Contacto</a>
+    </div>
   </nav>
 
-  <!-- Contenedor principal -->
-  <div class="container">
+  <!-- 🧱 Contenedor general -->
+  <div class="contenedor">
 
-    <!-- Formulario -->
-    <form class="saiyan-form">
-      <h2 class="saiyan-form-title">Únete a la Fuerza Saiyajin</h2>
+    <!-- 📣 Alertas -->
+    <div class="alerta alerta-exito">¡Has superado tu nivel de poder!</div>
+    <div class="alerta alerta-peligro">¡Cuidado! Freezer está cerca...</div>
 
-      <label for="nombre" class="saiyan-label">Nombre</label>
-      <input type="text" id="nombre" class="saiyan-input" placeholder="Goku">
+    <!-- 🃏 Tarjetas -->
+    <div class="tarjeta tarjeta-goku">
+      <div class="titulo-tarjeta">Goku <span class="insignia insignia-goku">Saiyajin</span></div>
+      <div class="cuerpo-tarjeta">
+        Guerrero legendario con un corazón puro y un gran apetito. Fan del Kamehameha.
+      </div>
+    </div>
 
-      <label for="email" class="saiyan-label">Correo</label>
-      <input type="email" id="email" class="saiyan-input" placeholder="goku@kamehameha.com">
+    <div class="tarjeta tarjeta-goku">
+      <div class="titulo-tarjeta">Vegeta <span class="insignia insignia-vegeta">Príncipe Saiyajin</span></div>
+      <div class="cuerpo-tarjeta">
+        Orgulloso, poderoso y siempre buscando superar a Kakaroto.
+      </div>
+    </div>
 
-      <label for="rango" class="saiyan-label">Nivel de poder</label>
-      <select id="rango" class="saiyan-select">
-        <option>Base</option>
-        <option>Super Saiyajin</option>
-        <option>Super Saiyajin Dios</option>
-        <option>Ultra Instinto</option>
-      </select>
+    <!-- 🧾 Formulario -->
+    <form class="formulario">
+      <h2>Únete a la Fuerza Saiyajin</h2>
 
-      <button type="submit" class="saiyan-btn saiyan-transform">Transformarse</button>
+      <div class="grupo-formulario">
+        <label class="etiqueta-formulario" for="nombre">Nombre</label>
+        <input class="entrada-formulario" type="text" id="nombre" placeholder="Gohan">
+      </div>
+
+      <div class="grupo-formulario">
+        <label class="etiqueta-formulario" for="email">Correo electrónico</label>
+        <input class="entrada-formulario" type="email" id="email" placeholder="gohan@capsulecorp.com">
+      </div>
+
+      <div class="grupo-formulario">
+        <label class="etiqueta-formulario" for="nivel">Nivel de poder</label>
+        <select class="seleccion-formulario" id="nivel">
+          <option>Base</option>
+          <option>Super Saiyajin</option>
+          <option>Super Saiyajin Dios</option>
+          <option>Ultra Instinto</option>
+        </select>
+      </div>
+
+      <button type="button" class="boton boton-goku" onclick="transformar()">¡Transformarse!</button>
     </form>
-
-    <!-- Badge de prueba -->
-    <div class="saiyan-badge saiyan-poder-maximo">¡Poder Máximo!</div>
 
   </div>
 
+  <!-- ⚡ Script para animación de transformación -->
+  <script>
+    function transformar() {
+      document.body.classList.add("transformado");
+      setTimeout(() => {
+        document.body.classList.remove("transformado");
+      }, 1200);
+    }
+  </script>
 </body>
 </html>
