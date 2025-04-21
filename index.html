@@ -2,82 +2,49 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saiyan CSS - Librería personalizada</title>
-  <link rel="stylesheet" href="sayan.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saiyan CSS - Librería Estilo Dragon Ball</title>
+  <link rel="stylesheet" href="sayan.css" />
 </head>
 <body class="cuerpo-pagina">
-
   <!-- 🔝 Barra de navegación -->
   <nav class="barra-navegacion">
-    <div class="barra-logo">SaiyanCSS</div>
+    <div class="barra-logo">Saiyan CSS</div>
     <div class="barra-enlaces">
-      <a href="#">Inicio</a>
-      <a href="#">Componentes</a>
-      <a href="#">Ejemplos</a>
-      <a href="#">Contacto</a>
+      <a href="login.html">Registro</a>
+      <a href="documentacion.html">Documentación</a>
+      <a href="colores.html">Colores</a>
     </div>
   </nav>
 
-  <!-- 🧱 Contenedor general -->
-  <div class="contenedor">
+  <!-- 🧱 Contenido principal -->
+  <main class="contenedor">
+    <section class="tarjeta tarjeta-goku">
+      <h1 class="titulo-tarjeta">¡Bienvenido a Saiyan CSS!</h1>
+      <p class="cuerpo-tarjeta">
+        Saiyan CSS es una librería de estilos inspirada en los colores y personajes icónicos de Dragon Ball. Diseñada para ser fácil de usar y darle a tu sitio un poder... ¡de más de 9000!
+      </p>
+      <a href="documentacion.html" class="boton boton-vegeta">Ver Documentación</a>
+    </section>
 
-    <!-- 📣 Alertas -->
-    <div class="alerta alerta-exito">¡Has superado tu nivel de poder!</div>
-    <div class="alerta alerta-peligro">¡Cuidado! Freezer está cerca...</div>
+    <section class="tarjeta">
+      <h2 class="titulo-tarjeta">✨ ¿Qué incluye?</h2>
+      <ul class="cuerpo-tarjeta">
+        <li>🎨 Paleta de colores basada en personajes como Goku, Vegeta y Piccolo</li>
+        <li>🔘 Botones personalizados y dinámicos</li>
+        <li>📣 Alertas temáticas</li>
+        <li>📋 Formularios estilizados</li>
+        <li>🏷️ Badges y tarjetas personalizadas</li>
+        <li>⚡ ¡Incluso animaciones de transformación!</li>
+      </ul>
+    </section>
 
-    <!-- 🃏 Tarjetas -->
-    <div class="tarjeta tarjeta-goku">
-      <div class="titulo-tarjeta">Goku <span class="insignia insignia-goku">Saiyajin</span></div>
-      <div class="cuerpo-tarjeta">
-        Guerrero legendario con un corazón puro y un gran apetito. Fan del Kamehameha.
-      </div>
-    </div>
-
-    <div class="tarjeta tarjeta-goku">
-      <div class="titulo-tarjeta">Vegeta <span class="insignia insignia-vegeta">Príncipe Saiyajin</span></div>
-      <div class="cuerpo-tarjeta">
-        Orgulloso, poderoso y siempre buscando superar a Kakaroto.
-      </div>
-    </div>
-
-    <!-- 🧾 Formulario -->
-    <form class="formulario">
-      <h2>Únete a la Fuerza Saiyajin</h2>
-
-      <div class="grupo-formulario">
-        <label class="etiqueta-formulario" for="nombre">Nombre</label>
-        <input class="entrada-formulario" type="text" id="nombre" placeholder="Gohan">
-      </div>
-
-      <div class="grupo-formulario">
-        <label class="etiqueta-formulario" for="email">Correo electrónico</label>
-        <input class="entrada-formulario" type="email" id="email" placeholder="gohan@capsulecorp.com">
-      </div>
-
-      <div class="grupo-formulario">
-        <label class="etiqueta-formulario" for="nivel">Nivel de poder</label>
-        <select class="seleccion-formulario" id="nivel">
-          <option>Base</option>
-          <option>Super Saiyajin</option>
-          <option>Super Saiyajin Dios</option>
-          <option>Ultra Instinto</option>
-        </select>
-      </div>
-
-      <button type="button" class="boton boton-goku" onclick="transformar()">¡Transformarse!</button>
-    </form>
-
-  </div>
-
-  <!-- ⚡ Script para animación de transformación -->
-  <script>
-    function transformar() {
-      document.body.classList.add("transformado");
-      setTimeout(() => {
-        document.body.classList.remove("transformado");
-      }, 1200);
-    }
-  </script>
+    <section class="tarjeta transformado">
+      <h2 class="titulo-tarjeta">💥 Potencia tu web con el estilo Saiyan</h2>
+      <p class="cuerpo-tarjeta">
+        Transforma tus proyectos con una apariencia única. Saiyan CSS está hecha para que el diseño no sea aburrido. ¡Dale ki a tus sitios!
+      </p>
+    </section>
+  </main>
 </body>
 </html>
