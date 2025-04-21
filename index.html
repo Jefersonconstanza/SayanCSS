@@ -2,82 +2,43 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saiyan CSS - Librería personalizada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saiyan CSS | Inicio</title>
   <link rel="stylesheet" href="sayan.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
 </head>
-<body class="cuerpo-pagina">
+<body>
+  <header class="saiyan-navbar">
+    <img src="img/logo.png" alt="Logo Dragon Ball" class="saiyan-logo">
+    <nav>
+      <ul class="saiyan-nav">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="documentacion.html">Documentación</a></li>
+        <li><a href="colores.html">Colores</a></li>
+        <li><a href="login.html">Inicio Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- 🔝 Barra de navegación -->
-  <nav class="barra-navegacion">
-    <div class="barra-logo">SaiyanCSS</div>
-    <div class="barra-enlaces">
-      <a href="#">Inicio</a>
-      <a href="#">Componentes</a>
-      <a href="#">Ejemplos</a>
-      <a href="#">Contacto</a>
-    </div>
-  </nav>
+  <main class="saiyan-hero">
+    <section class="saiyan-hero-content">
+      <h2 class="saiyan-label">Anime</h2>
+      <h1 class="saiyan-title">Son Goku (Kakarot)</h1>
+      <p class="saiyan-desc">
+        ¡Bienvenido a Saiyan CSS! Una librería visual para desarrolladores que buscan poder y estilo al construir sus sitios web. Con Goku como guía, aprende a utilizar nuestros componentes personalizados al estilo Dragon Ball.
+      </p>
+      <p class="saiyan-price">$15.00</p>
+      <a href="documentacion.html" class="saiyan-btn">Explorar ahora</a>
+    </section>
 
-  <!-- 🧱 Contenedor general -->
-  <div class="contenedor">
+    <section class="saiyan-hero-img">
+      <img src="img/goku-nube.png" alt="Goku en la nube voladora">
+    </section>
+  </main>
 
-    <!-- 📣 Alertas -->
-    <div class="alerta alerta-exito">¡Has superado tu nivel de poder!</div>
-    <div class="alerta alerta-peligro">¡Cuidado! Freezer está cerca...</div>
-
-    <!-- 🃏 Tarjetas -->
-    <div class="tarjeta tarjeta-goku">
-      <div class="titulo-tarjeta">Goku <span class="insignia insignia-goku">Saiyajin</span></div>
-      <div class="cuerpo-tarjeta">
-        Guerrero legendario con un corazón puro y un gran apetito. Fan del Kamehameha.
-      </div>
-    </div>
-
-    <div class="tarjeta tarjeta-goku">
-      <div class="titulo-tarjeta">Vegeta <span class="insignia insignia-vegeta">Príncipe Saiyajin</span></div>
-      <div class="cuerpo-tarjeta">
-        Orgulloso, poderoso y siempre buscando superar a Kakaroto.
-      </div>
-    </div>
-
-    <!-- 🧾 Formulario -->
-    <form class="formulario">
-      <h2>Únete a la Fuerza Saiyajin</h2>
-
-      <div class="grupo-formulario">
-        <label class="etiqueta-formulario" for="nombre">Nombre</label>
-        <input class="entrada-formulario" type="text" id="nombre" placeholder="Gohan">
-      </div>
-
-      <div class="grupo-formulario">
-        <label class="etiqueta-formulario" for="email">Correo electrónico</label>
-        <input class="entrada-formulario" type="email" id="email" placeholder="gohan@capsulecorp.com">
-      </div>
-
-      <div class="grupo-formulario">
-        <label class="etiqueta-formulario" for="nivel">Nivel de poder</label>
-        <select class="seleccion-formulario" id="nivel">
-          <option>Base</option>
-          <option>Super Saiyajin</option>
-          <option>Super Saiyajin Dios</option>
-          <option>Ultra Instinto</option>
-        </select>
-      </div>
-
-      <button type="button" class="boton boton-goku" onclick="transformar()">¡Transformarse!</button>
-    </form>
-
-  </div>
-
-  <!-- ⚡ Script para animación de transformación -->
-  <script>
-    function transformar() {
-      document.body.classList.add("transformado");
-      setTimeout(() => {
-        document.body.classList.remove("transformado");
-      }, 1200);
-    }
-  </script>
+  <footer class="saiyan-footer">
+    <p>&copy; 2025 Saiyan CSS | Hecho por Steven con Ki y código.</p>
+  </footer>
 </body>
 </html>
