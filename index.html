@@ -3,48 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saiyan CSS - Librería Estilo Dragon Ball</title>
+  <title>Saiyan CSS - Transformá tu web</title>
   <link rel="stylesheet" href="sayan.css" />
 </head>
 <body class="cuerpo-pagina">
-  <!-- 🔝 Barra de navegación -->
+
+  <!-- 🔝 Navbar -->
   <nav class="barra-navegacion">
     <div class="barra-logo">Saiyan CSS</div>
     <div class="barra-enlaces">
-      <a href="login.html">Registro</a>
+      <a href="index.html">Inicio</a>
       <a href="documentacion.html">Documentación</a>
       <a href="colores.html">Colores</a>
+      <a href="login.html">Registro</a>
     </div>
   </nav>
 
-  <!-- 🧱 Contenido principal -->
+  <!-- ⚡ Hero principal -->
   <main class="contenedor">
-    <section class="tarjeta tarjeta-goku">
-      <h1 class="titulo-tarjeta">¡Bienvenido a Saiyan CSS!</h1>
-      <p class="cuerpo-tarjeta">
-        Saiyan CSS es una librería de estilos inspirada en los colores y personajes icónicos de Dragon Ball. Diseñada para ser fácil de usar y darle a tu sitio un poder... ¡de más de 9000!
-      </p>
-      <a href="documentacion.html" class="boton boton-vegeta">Ver Documentación</a>
+    <section class="tarjeta" style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; justify-content: space-between; background: linear-gradient(to right, #fffbe6, #ffe082);">
+
+      <!-- Texto -->
+      <div style="flex: 1; min-width: 280px;">
+        <h1 class="titulo-tarjeta" style="font-size: 2.5rem;">
+          Transforma tu Web con <span style="color:#fdd835;">Saiyan CSS</span>
+        </h1>
+        <p class="cuerpo-tarjeta">
+          Una librería inspirada en el poder de los Saiyajins, llena de color, energía y estilo. Fácil de aplicar, visualmente impactante y divertida de usar.
+        </p>
+        <a href="documentacion.html" class="boton boton-goku" style="margin-top: 1rem;">Ver Documentación</a>
+      </div>
+
+      <!-- Imagen de Goku -->
+      <div style="flex: 1; text-align: center; min-width: 280px;">
+        <img src="img/goku.jpg" alt="Goku en la nube voladora" style="max-height: 300px;" />
+      </div>
     </section>
 
-    <section class="tarjeta">
-      <h2 class="titulo-tarjeta">✨ ¿Qué incluye?</h2>
-      <ul class="cuerpo-tarjeta">
-        <li>🎨 Paleta de colores basada en personajes como Goku, Vegeta y Piccolo</li>
-        <li>🔘 Botones personalizados y dinámicos</li>
-        <li>📣 Alertas temáticas</li>
-        <li>📋 Formularios estilizados</li>
-        <li>🏷️ Badges y tarjetas personalizadas</li>
-        <li>⚡ ¡Incluso animaciones de transformación!</li>
+    <!-- 🎯 Beneficios -->
+    <section class="tarjeta tarjeta-goku">
+      <h2 class="titulo-tarjeta">¿Qué incluye Saiyan CSS?</h2>
+      <ul class="cuerpo-tarjeta" style="line-height: 1.8;">
+        <li>🎨 Paleta de colores basada en Goku, Vegeta, Piccolo y más</li>
+        <li>🔘 Botones y formularios estilizados</li>
+        <li>📣 Alertas temáticas Saiyajin</li>
+        <li>📋 Tarjetas personalizadas con aura visual</li>
+        <li>⚡ Animaciones de transformación</li>
       </ul>
     </section>
 
+    <!-- 🌟 Llamado a la acción -->
     <section class="tarjeta transformado">
-      <h2 class="titulo-tarjeta">💥 Potencia tu web con el estilo Saiyan</h2>
+      <h2 class="titulo-tarjeta">¡Potencia tu código con Ki!</h2>
       <p class="cuerpo-tarjeta">
-        Transforma tus proyectos con una apariencia única. Saiyan CSS está hecha para que el diseño no sea aburrido. ¡Dale ki a tus sitios!
+        No es magia, es CSS con espíritu de combate. Comenzá a usar Saiyan CSS y lleva tu desarrollo web a una nueva fase de poder.
       </p>
     </section>
   </main>
+
+  <footer class="barra-navegacion" style="justify-content: center;">
+    <p>&copy; 2025 Steven | Saiyan CSS | Inspirado en Dragon Ball 💥</p>
+  </footer>
+
 </body>
 </html>

@@ -208,3 +208,17 @@ $color-fondo: #f2f2f2;
 .transformado {
   animation: ki-transformacion 1.2s ease-in-out;
 }
+@keyframes entrada-navbar {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.barra-navegacion {
+  animation: entrada-navbar 0.7s ease-out;
+}
