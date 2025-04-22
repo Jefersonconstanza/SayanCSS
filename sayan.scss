@@ -2,7 +2,7 @@
 $color-goku: #f27d0c;
 $color-vegeta: #2e5aac;
 $color-piccolo: #8bc34a;
-$color-frieza: #d62828;
+$color-frieza: #9f329c; 
 $color-saiyan: #fdd835;
 $color-negro: #1e1e1e;
 $color-fondo: #f2f2f2;
@@ -108,6 +108,7 @@ $color-fondo: #f2f2f2;
   cursor: pointer;
   font-weight: bold;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .boton-goku {
@@ -120,6 +121,10 @@ $color-fondo: #f2f2f2;
   color: white;
 }
 
+.boton-freeza {
+  background-color: $color-frieza;
+  color: white;
+}
 .boton:hover {
   opacity: 0.9;
   transform: scale(1.03);
@@ -145,7 +150,7 @@ $color-fondo: #f2f2f2;
 
 // 🧾 Formulario
 .formulario {
-  background: linear-gradient(to bottom, white, $color-saiyan);
+  background: linear-gradient(to bottom, white, $color-piccolo);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -165,7 +170,7 @@ $color-fondo: #f2f2f2;
 .seleccion-formulario {
   width: 100%;
   padding: 0.75rem;
-  border: 2px solid $color-piccolo;
+  border: 2px solid $color-frieza;
   border-radius: 8px;
   font-size: 1rem;
   background-color: #fefefe;
@@ -239,10 +244,26 @@ $color-fondo: #f2f2f2;
   }
 }
 
-// 👑 Modo Vegeta
+//  Modo Vegeta
 .modo-vegeta {
   background-color: $color-negro;
   color: white;
+}
+.modo-vegeta .boton-goku {
+  background-color: $color-goku;
+  color: white;
+}
+.modo-vegeta .boton-goku:hover {
+  background-color: $color-goku;
+  box-shadow: 0 0 10px $color-goku;
+}
+.modo-vegeta .boton-freeza {
+  background-color: $color-frieza;
+  color: white;
+}
+.modo-vegeta .boton-freeza:hover {
+  background-color: $color-frieza;
+  box-shadow: 0 0 10px $color-frieza;
 }
 
 .modo-vegeta .barra-navegacion {
@@ -256,10 +277,27 @@ $color-fondo: #f2f2f2;
   box-shadow: 0 0 20px $color-vegeta;
 }
 
-.modo-vegeta .boton {
-  background-color: $color-vegeta;
+// ⚠️ Excepciones para que botones con clase específica conserven su color
+.modo-vegeta .boton-goku {
+  background-color: $color-goku;
   color: white;
 }
+
+.modo-vegeta .boton-goku:hover {
+  background-color: $color-goku;
+  box-shadow: 0 0 10px $color-goku;
+}
+
+.modo-vegeta .boton-frieza {
+  background-color: $color-frieza;
+  color: white;
+}
+
+.modo-vegeta .boton-frieza:hover {
+  background-color: $color-frieza;
+  box-shadow: 0 0 10px $color-frieza;
+}
+
 
 .modo-vegeta .boton:hover {
   background-color: $color-goku;
@@ -290,13 +328,13 @@ $color-fondo: #f2f2f2;
 .img-vegeta {
   display: none;
   max-height: 250px;
-  margin-top: 2rem;
+  text-align: center;
 }
 
 .modo-vegeta .img-vegeta {
   display: block;
 }
-// 🌅 Sección HERO (estilo por defecto Goku)
+
 .hero-seccion {
   display: flex;
   flex-wrap: wrap;
@@ -324,11 +362,9 @@ $color-fondo: #f2f2f2;
   display: none;
 }
 
-// Mostrar solo una imagen según el modo
-:not(.modo-vegeta) .img-goku {
+body:not(.modo-vegeta) .img-goku {
   display: block;
 }
-
 .modo-vegeta .img-vegeta {
   display: block;
 }
@@ -337,3 +373,95 @@ $color-fondo: #f2f2f2;
 .modo-vegeta .hero-seccion {
   background: linear-gradient(to right, #1e1e1e, #2e5aac);
 }
+
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+}
+
+.columna {
+  flex: 1;
+  min-width: 250px;
+  padding: 0.5rem;
+}
+
+.contenedor-pequeño {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.contenedor-grande {
+  max-width: 1400px;
+  margin: auto;
+  padding: 2rem;
+}
+
+
+.alerta-info {
+  background-color: $color-vegeta;
+  color: white;
+}
+
+.alerta-aviso {
+  background-color: $color-goku;
+  color: white;
+}
+
+.boton-chico {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+}
+
+.boton-mediano {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.boton-grande {
+  font-size: 1.3rem;
+  padding: 0.7rem 1.4rem;
+}
+
+
+
+
+.txt-grande { font-size: 1.5rem; }
+.txt-mediano { font-size: 1rem; }
+.txt-chico { font-size: 0.8rem; }
+
+.txt-bold { font-weight: bold; }
+.txt-italic { font-style: italic; }
+
+.txt-goku { color: $color-goku; }
+.txt-vegeta { color: $color-vegeta; }
+.txt-piccolo { color: $color-piccolo; }
+.txt-frieza { color: $color-frieza; }
+
+// Márgenes
+.margen-1 { margin: 1rem; }
+.margen-2 { margin: 2rem; }
+.margen-3 { margin: 3rem; }
+
+// Sombras
+.sombra-saiyan {
+  box-shadow: 0 0 15px $color-saiyan;
+}
+
+// Borde redondeado
+.redondeado {
+  border-radius: 12px;
+}
+
+// Ocultar elementos
+.oculto {
+  display: none;
+}
+
+// Fondos
+.fondo-goku { background-color: $color-goku; color: white; }
+.fondo-vegeta { background-color: $color-vegeta; color: white; }
+.fondo-piccolo { background-color: $color-piccolo; color: white; }
+.fondo-frieza { background-color: $color-frieza; color: white; }
+.fondo-saiyan { background-color: $color-saiyan; color: black; }

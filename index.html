@@ -13,8 +13,6 @@
     <div class="barra-logo">Saiyan CSS</div>
     <div class="barra-enlaces">
       <a href="index.html">Inicio</a>
-      <a href="documentacion.html">Documentación</a>
-      <a href="colores.html">Colores</a>
       <a href="login.html">Registro</a>
     </div>
   </nav>
@@ -22,6 +20,7 @@
   <!-- ⚡ Sección principal -->
   <main class="contenedor">
     <section class="tarjeta hero-seccion">
+
       <!-- Texto -->
       <div class="hero-texto">
         <h1 class="titulo-tarjeta">
@@ -31,7 +30,8 @@
           Una librería inspirada en el poder de los Saiyajins, llena de color, energía y estilo.
           Fácil de aplicar, visualmente impactante y divertida de usar.
         </p>
-        <a href="documentacion.html" class="boton boton-goku">Ver Documentación</a>
+        <a href="documentacion.html" class="boton boton-goku boton-mediano margen-1">Ver Documentación</a>
+        <a href="PaletaColores.html" class="boton boton-freeza boton-mediano margen-1">Ver Paleta de Colores</a>
       </div>
 
       <!-- Imagen Goku -->
@@ -41,7 +41,7 @@
 
       <!-- Imagen Vegeta -->
       <div class="img-vegeta">
-        <img src="img/vegeta.jpeg" alt="Vegeta Modo Saiyan" />
+        <img src="img/vegeta2.jpg" alt="Vegeta Modo Saiyan" />
       </div>
     </section>
 
@@ -57,6 +57,13 @@
       </ul>
     </section>
 
+    <!-- 📣 Alertas de ejemplo -->
+    <section class="tarjeta">
+      <h2 class="titulo-tarjeta">📣 Alertas rápidas</h2>
+      <div class="alerta alerta-info">Información Saiyan (.alerta-info)</div>
+      <div class="alerta alerta-aviso">¡Aviso de energía inestable! (.alerta-aviso)</div>
+    </section>
+
     <!-- 🌟 Llamado a la acción -->
     <section class="tarjeta transformado">
       <h2 class="titulo-tarjeta">¡Potencia tu código con Ki!</h2>
@@ -69,16 +76,24 @@
   <!-- 👇 Botón de modo Vegeta -->
   <button class="boton-modo" onclick="activarModoVegeta()">Modo Vegeta 🟦</button>
 
-  <!-- 👑 Script -->
   <script>
     function activarModoVegeta() {
-      document.body.classList.toggle("modo-vegeta");
+      const body = document.body;
+      const modoActivo = body.classList.toggle("modo-vegeta");
+      if (modoActivo) {
+        localStorage.setItem("modo", "vegeta");
+      } else {
+        localStorage.removeItem("modo");
+      }
     }
-  </script>
 
-  <footer class="barra-navegacion" style="justify-content: center;">
-    <p>&copy; 2025 Steven | Saiyan CSS | Inspirado en Dragon Ball 💥</p>
-  </footer>
+    // Al cargar la página, aplicar modo Vegeta si está guardado
+    window.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("modo") === "vegeta") {
+        document.body.classList.add("modo-vegeta");
+      }
+    });
+  </script>
 
 </body>
 </html>

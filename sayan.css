@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .cuerpo-pagina {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f2f2f2;
@@ -90,6 +91,7 @@
   cursor: pointer;
   font-weight: bold;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .boton-goku {
@@ -99,6 +101,11 @@
 
 .boton-vegeta {
   background-color: #2e5aac;
+  color: white;
+}
+
+.boton-freeza {
+  background-color: #9f329c;
   color: white;
 }
 
@@ -120,12 +127,12 @@
 }
 
 .alerta-peligro {
-  background-color: #d62828;
+  background-color: #9f329c;
   color: white;
 }
 
 .formulario {
-  background: linear-gradient(to bottom, white, #fdd835);
+  background: linear-gradient(to bottom, white, #8bc34a);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -145,7 +152,7 @@
 .seleccion-formulario {
   width: 100%;
   padding: 0.75rem;
-  border: 2px solid #8bc34a;
+  border: 2px solid #9f329c;
   border-radius: 8px;
   font-size: 1rem;
   background-color: #fefefe;
@@ -219,6 +226,26 @@
   color: white;
 }
 
+.modo-vegeta .boton-goku {
+  background-color: #f27d0c;
+  color: white;
+}
+
+.modo-vegeta .boton-goku:hover {
+  background-color: #f27d0c;
+  box-shadow: 0 0 10px #f27d0c;
+}
+
+.modo-vegeta .boton-freeza {
+  background-color: #9f329c;
+  color: white;
+}
+
+.modo-vegeta .boton-freeza:hover {
+  background-color: #9f329c;
+  box-shadow: 0 0 10px #9f329c;
+}
+
 .modo-vegeta .barra-navegacion {
   background-color: #2e5aac;
   border-bottom: 4px solid #f27d0c;
@@ -230,9 +257,24 @@
   box-shadow: 0 0 20px #2e5aac;
 }
 
-.modo-vegeta .boton {
-  background-color: #2e5aac;
+.modo-vegeta .boton-goku {
+  background-color: #f27d0c;
   color: white;
+}
+
+.modo-vegeta .boton-goku:hover {
+  background-color: #f27d0c;
+  box-shadow: 0 0 10px #f27d0c;
+}
+
+.modo-vegeta .boton-frieza {
+  background-color: #9f329c;
+  color: white;
+}
+
+.modo-vegeta .boton-frieza:hover {
+  background-color: #9f329c;
+  box-shadow: 0 0 10px #9f329c;
 }
 
 .modo-vegeta .boton:hover {
@@ -263,7 +305,7 @@
 .img-vegeta {
   display: none;
   max-height: 250px;
-  margin-top: 2rem;
+  text-align: center;
 }
 
 .modo-vegeta .img-vegeta {
@@ -297,7 +339,7 @@
   display: none;
 }
 
-:not(.modo-vegeta) .img-goku {
+body:not(.modo-vegeta) .img-goku {
   display: block;
 }
 
@@ -307,6 +349,140 @@
 
 .modo-vegeta .hero-seccion {
   background: linear-gradient(to right, #1e1e1e, #2e5aac);
+}
+
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+}
+
+.columna {
+  flex: 1;
+  min-width: 250px;
+  padding: 0.5rem;
+}
+
+.contenedor-pequeño {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.contenedor-grande {
+  max-width: 1400px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.alerta-info {
+  background-color: #2e5aac;
+  color: white;
+}
+
+.alerta-aviso {
+  background-color: #f27d0c;
+  color: white;
+}
+
+.boton-chico {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+}
+
+.boton-mediano {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.boton-grande {
+  font-size: 1.3rem;
+  padding: 0.7rem 1.4rem;
+}
+
+.txt-grande {
+  font-size: 1.5rem;
+}
+
+.txt-mediano {
+  font-size: 1rem;
+}
+
+.txt-chico {
+  font-size: 0.8rem;
+}
+
+.txt-bold {
+  font-weight: bold;
+}
+
+.txt-italic {
+  font-style: italic;
+}
+
+.txt-goku {
+  color: #f27d0c;
+}
+
+.txt-vegeta {
+  color: #2e5aac;
+}
+
+.txt-piccolo {
+  color: #8bc34a;
+}
+
+.txt-frieza {
+  color: #9f329c;
+}
+
+.margen-1 {
+  margin: 1rem;
+}
+
+.margen-2 {
+  margin: 2rem;
+}
+
+.margen-3 {
+  margin: 3rem;
+}
+
+.sombra-saiyan {
+  box-shadow: 0 0 15px #fdd835;
+}
+
+.redondeado {
+  border-radius: 12px;
+}
+
+.oculto {
+  display: none;
+}
+
+.fondo-goku {
+  background-color: #f27d0c;
+  color: white;
+}
+
+.fondo-vegeta {
+  background-color: #2e5aac;
+  color: white;
+}
+
+.fondo-piccolo {
+  background-color: #8bc34a;
+  color: white;
+}
+
+.fondo-frieza {
+  background-color: #9f329c;
+  color: white;
+}
+
+.fondo-saiyan {
+  background-color: #fdd835;
+  color: black;
 }
 
 /*# sourceMappingURL=sayan.css.map */

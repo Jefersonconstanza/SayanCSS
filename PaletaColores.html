@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paleta de Colores - Saiyan CSS</title>
+  <link rel="stylesheet" href="sayan.css" />
+</head>
+<body class="cuerpo-pagina">
+
+  <!-- 🔝 Navbar -->
+  <nav class="barra-navegacion">
+    <div class="barra-logo">Saiyan CSS</div>
+    <div class="barra-enlaces">
+      <a href="index.html">Inicio</a>
+    </div>
+  </nav>
+
+  <main class="contenedor">
+    <!-- 🎨 Encabezado -->
+    <section class="tarjeta tarjeta-goku">
+      <h1 class="titulo-tarjeta">🎨 Paleta de Colores</h1>
+      <p class="cuerpo-tarjeta">
+        Estos son los colores base inspirados en personajes de Dragon Ball que componen la esencia visual de <strong>Saiyan CSS</strong>.
+      </p>
+    </section>
+
+    <!-- 🔷 Tarjetas de color -->
+    <section class="tarjeta">
+      <h2 class="titulo-tarjeta">Colores Saiyajin</h2>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+        <!-- Color Goku -->
+        <div style="flex: 1 1 200px; background: #f27d0c; padding: 1rem; color: white; border-radius: 10px;">
+          <strong>$color-goku</strong><br>
+          #f27d0c
+        </div>
+
+        <!-- Color Vegeta -->
+        <div style="flex: 1 1 200px; background: #2e5aac; padding: 1rem; color: white; border-radius: 10px;">
+          <strong>$color-vegeta</strong><br>
+          #2e5aac
+        </div>
+
+        <!-- Color Piccolo -->
+        <div style="flex: 1 1 200px; background: #8bc34a; padding: 1rem; color: white; border-radius: 10px;">
+          <strong>$color-piccolo</strong><br>
+          #8bc34a
+        </div>
+
+        <!-- Color Frieza -->
+        <div style="flex: 1 1 200px; background: #9f329c; padding: 1rem; color: white; border-radius: 10px;">
+          <strong>$color-frieza</strong><br>
+          #d62828
+        </div>
+
+        <!-- Color Saiyan -->
+        <div style="flex: 1 1 200px; background: #fdd835; padding: 1rem; color: black; border-radius: 10px;">
+          <strong>$color-saiyan</strong><br>
+          #fdd835
+        </div>
+
+        <!-- Color Fondo -->
+        <div style="flex: 1 1 200px; background: #f2f2f2; padding: 1rem; color: #1e1e1e; border-radius: 10px;">
+          <strong>$color-fondo</strong><br>
+          #f2f2f2
+        </div>
+
+        <!-- Color Negro -->
+        <div style="flex: 1 1 200px; background: #1e1e1e; padding: 1rem; color: white; border-radius: 10px;">
+          <strong>$color-negro</strong><br>
+          #1e1e1e
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 🟦 Botón Modo Vegeta -->
+  <button class="boton-modo" onclick="activarModoVegeta()">Modo Vegeta 🟦</button>
+
+  <!-- 🧠 Script modo Vegeta -->
+  <script>
+    function activarModoVegeta() {
+      const body = document.body;
+      const modoActivo = body.classList.toggle("modo-vegeta");
+      if (modoActivo) {
+        localStorage.setItem("modo", "vegeta");
+      } else {
+        localStorage.removeItem("modo");
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("modo") === "vegeta") {
+        document.body.classList.add("modo-vegeta");
+      }
+    });
+  </script>
+
+</body>
+</html>
