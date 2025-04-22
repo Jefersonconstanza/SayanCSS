@@ -109,6 +109,11 @@
   color: white;
 }
 
+.boton-piccolo {
+  background-color: #8bc34a;
+  color: white;
+}
+
 .boton:hover {
   opacity: 0.9;
   transform: scale(1.03);

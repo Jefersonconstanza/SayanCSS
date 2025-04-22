@@ -125,6 +125,10 @@ $color-fondo: #f2f2f2;
   background-color: $color-frieza;
   color: white;
 }
+.boton-piccolo {
+  background-color: $color-piccolo;
+  color: white;
+}
 .boton:hover {
   opacity: 0.9;
   transform: scale(1.03);
