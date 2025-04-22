@@ -7,7 +7,7 @@ $color-saiyan: #fdd835;
 $color-negro: #1e1e1e;
 $color-fondo: #f2f2f2;
 
-// 🌐 Estilos generales del sitio
+// Estilos generales del sitio
 .cuerpo-pagina {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: $color-fondo;
@@ -16,7 +16,7 @@ $color-fondo: #f2f2f2;
   padding: 0;
 }
 
-// 🧱 Contenedor principal
+//  Contenedor principal
 .contenedor {
   width: 90%;
   margin: auto;
@@ -24,7 +24,7 @@ $color-fondo: #f2f2f2;
   padding: 1rem;
 }
 
-// 🔝 Barra de navegación (navbar)
+//  Barra de navegación 
 .barra-navegacion {
   background-color: $color-goku;
   color: white;
@@ -70,7 +70,7 @@ $color-fondo: #f2f2f2;
   }
 }
 
-// 🧾 Tarjetas
+//  Tarjetas
 .tarjeta {
   background-color: white;
   border-radius: 12px;
@@ -100,7 +100,7 @@ $color-fondo: #f2f2f2;
   line-height: 1.5;
 }
 
-// 🧷 Botones
+//  Botones
 .boton {
   padding: 0.5rem 1rem;
   border: none;
@@ -134,7 +134,7 @@ $color-fondo: #f2f2f2;
   transform: scale(1.03);
 }
 
-// 📣 Alertas
+//  Alertas
 .alerta {
   padding: 1rem;
   border-radius: 8px;
@@ -152,7 +152,7 @@ $color-fondo: #f2f2f2;
   color: white;
 }
 
-// 🧾 Formulario
+//  Formulario
 .formulario {
   background: linear-gradient(to bottom, white, $color-piccolo);
   padding: 2rem;
@@ -186,7 +186,7 @@ $color-fondo: #f2f2f2;
   }
 }
 
-// 🏷️ Badges
+//  Badges
 .insignia {
   display: inline-block;
   padding: 0.4em 0.7em;
@@ -210,7 +210,7 @@ $color-fondo: #f2f2f2;
   background-color: $color-piccolo;
 }
 
-// ⚡ Animación de transformación
+//  Animación de transformación
 @keyframes ki-transformacion {
   0% {
     background-color: $color-negro;
@@ -236,7 +236,7 @@ $color-fondo: #f2f2f2;
   animation: ki-transformacion 1.2s ease-in-out;
 }
 
-// 🌀 Animación navbar ya incluida
+//  Animación navbar ya incluida
 @keyframes entrada-navbar {
   from {
     transform: translateY(-100%);
@@ -281,7 +281,7 @@ $color-fondo: #f2f2f2;
   box-shadow: 0 0 20px $color-vegeta;
 }
 
-// ⚠️ Excepciones para que botones con clase específica conserven su color
+//  Excepciones para que botones con clase específica conserven su color
 .modo-vegeta .boton-goku {
   background-color: $color-goku;
   color: white;
