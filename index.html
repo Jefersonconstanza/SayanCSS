@@ -19,31 +19,36 @@
     </div>
   </nav>
 
-  <!-- ⚡ Hero principal -->
+  <!-- ⚡ Sección principal -->
   <main class="contenedor">
-    <section class="tarjeta" style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; justify-content: space-between; background: linear-gradient(to right, #fffbe6, #ffe082);">
-
+    <section class="tarjeta hero-seccion">
       <!-- Texto -->
-      <div style="flex: 1; min-width: 280px;">
-        <h1 class="titulo-tarjeta" style="font-size: 2.5rem;">
+      <div class="hero-texto">
+        <h1 class="titulo-tarjeta">
           Transforma tu Web con <span style="color:#fdd835;">Saiyan CSS</span>
         </h1>
         <p class="cuerpo-tarjeta">
-          Una librería inspirada en el poder de los Saiyajins, llena de color, energía y estilo. Fácil de aplicar, visualmente impactante y divertida de usar.
+          Una librería inspirada en el poder de los Saiyajins, llena de color, energía y estilo.
+          Fácil de aplicar, visualmente impactante y divertida de usar.
         </p>
-        <a href="documentacion.html" class="boton boton-goku" style="margin-top: 1rem;">Ver Documentación</a>
+        <a href="documentacion.html" class="boton boton-goku">Ver Documentación</a>
       </div>
 
-      <!-- Imagen de Goku -->
-      <div style="flex: 1; text-align: center; min-width: 280px;">
-        <img src="img/goku.jpg" alt="Goku en la nube voladora" style="max-height: 300px;" />
+      <!-- Imagen Goku -->
+      <div class="img-goku">
+        <img src="img/goku-nube.png" alt="Goku en la nube voladora" />
+      </div>
+
+      <!-- Imagen Vegeta -->
+      <div class="img-vegeta">
+        <img src="img/vegeta-power.png" alt="Vegeta Modo Saiyan" />
       </div>
     </section>
 
     <!-- 🎯 Beneficios -->
     <section class="tarjeta tarjeta-goku">
       <h2 class="titulo-tarjeta">¿Qué incluye Saiyan CSS?</h2>
-      <ul class="cuerpo-tarjeta" style="line-height: 1.8;">
+      <ul class="cuerpo-tarjeta">
         <li>🎨 Paleta de colores basada en Goku, Vegeta, Piccolo y más</li>
         <li>🔘 Botones y formularios estilizados</li>
         <li>📣 Alertas temáticas Saiyajin</li>
@@ -61,23 +66,19 @@
     </section>
   </main>
 
+  <!-- 👇 Botón de modo Vegeta -->
+  <button class="boton-modo" onclick="activarModoVegeta()">Modo Vegeta 🟦</button>
+
+  <!-- 👑 Script -->
+  <script>
+    function activarModoVegeta() {
+      document.body.classList.toggle("modo-vegeta");
+    }
+  </script>
+
   <footer class="barra-navegacion" style="justify-content: center;">
     <p>&copy; 2025 Steven | Saiyan CSS | Inspirado en Dragon Ball 💥</p>
   </footer>
-<!-- 🔁 Botón de cambio de modo -->
-<button class="boton-modo" onclick="activarModoVegeta()">Modo Vegeta 🟦</button>
-
-<!-- 👑 Imagen de Vegeta -->
-<div style="text-align:center;">
-  <img src="img/vegeta.jpeg" alt="Vegeta Modo Saiyan" class="img-vegeta" />
-</div>
-
-<!-- 🧠 Script para activar modo Vegeta -->
-<script>
-  function activarModoVegeta() {
-    document.body.classList.toggle("modo-vegeta");
-  }
-</script>
 
 </body>
 </html>

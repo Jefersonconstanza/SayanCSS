@@ -270,4 +270,43 @@
   display: block;
 }
 
+.hero-seccion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  background: linear-gradient(to right, #fffbe6, #ffe082);
+  padding: 2rem;
+}
+
+.hero-seccion img {
+  max-height: 300px;
+}
+
+.hero-texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.img-goku,
+.img-vegeta {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+  display: none;
+}
+
+:not(.modo-vegeta) .img-goku {
+  display: block;
+}
+
+.modo-vegeta .img-vegeta {
+  display: block;
+}
+
+.modo-vegeta .hero-seccion {
+  background: linear-gradient(to right, #1e1e1e, #2e5aac);
+}
+
 /*# sourceMappingURL=sayan.css.map */
