@@ -353,7 +353,6 @@ $color-fondo: #f2f2f2;
   flex: 1;
   min-width: 280px;
 }
-
 .img-goku,
 .img-vegeta {
   flex: 1;
@@ -369,7 +368,6 @@ body:not(.modo-vegeta) .img-goku {
   display: block;
 }
 
-// Fondo hero en modo Vegeta
 .modo-vegeta .hero-seccion {
   background: linear-gradient(to right, #1e1e1e, #2e5aac);
 }
