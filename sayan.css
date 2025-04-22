@@ -21,6 +21,7 @@
   align-items: center;
   padding: 1rem 2rem;
   border-bottom: 4px solid #2e5aac;
+  animation: entrada-navbar 0.7s ease-out;
 }
 
 .barra-logo {
@@ -29,14 +30,29 @@
 }
 
 .barra-enlaces a {
+  position: relative;
   color: white;
   text-decoration: none;
   margin-left: 1.5rem;
   font-weight: 500;
   transition: 0.3s;
 }
+.barra-enlaces a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #fdd835;
+  transition: width 0.3s ease-in-out;
+}
+.barra-enlaces a:hover::after {
+  width: 100%;
+}
 .barra-enlaces a:hover {
   color: #fdd835;
+  text-shadow: 0 0 8px #fdd835;
 }
 
 .tarjeta {
@@ -198,8 +214,60 @@
     opacity: 1;
   }
 }
-.barra-navegacion {
-  animation: entrada-navbar 0.7s ease-out;
+.modo-vegeta {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.modo-vegeta .barra-navegacion {
+  background-color: #2e5aac;
+  border-bottom: 4px solid #f27d0c;
+}
+
+.modo-vegeta .tarjeta {
+  background-color: #1e1e1e;
+  color: white;
+  box-shadow: 0 0 20px #2e5aac;
+}
+
+.modo-vegeta .boton {
+  background-color: #2e5aac;
+  color: white;
+}
+
+.modo-vegeta .boton:hover {
+  background-color: #f27d0c;
+  box-shadow: 0 0 10px #f27d0c;
+}
+
+.boton-modo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  background-color: #2e5aac;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #2e5aac;
+}
+.boton-modo:hover {
+  background-color: #f27d0c;
+  box-shadow: 0 0 10px #f27d0c;
+}
+
+.img-vegeta {
+  display: none;
+  max-height: 250px;
+  margin-top: 2rem;
+}
+
+.modo-vegeta .img-vegeta {
+  display: block;
 }
 
 /*# sourceMappingURL=sayan.css.map */

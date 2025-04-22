@@ -33,6 +33,7 @@ $color-fondo: #f2f2f2;
   align-items: center;
   padding: 1rem 2rem;
   border-bottom: 4px solid $color-vegeta;
+  animation: entrada-navbar 0.7s ease-out;
 }
 
 .barra-logo {
@@ -41,14 +42,31 @@ $color-fondo: #f2f2f2;
 }
 
 .barra-enlaces a {
+  position: relative;
   color: white;
   text-decoration: none;
   margin-left: 1.5rem;
   font-weight: 500;
   transition: 0.3s;
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: $color-saiyan;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
   &:hover {
     color: $color-saiyan;
+    text-shadow: 0 0 8px $color-saiyan;
   }
 }
 
@@ -208,6 +226,8 @@ $color-fondo: #f2f2f2;
 .transformado {
   animation: ki-transformacion 1.2s ease-in-out;
 }
+
+// 🌀 Animación navbar ya incluida
 @keyframes entrada-navbar {
   from {
     transform: translateY(-100%);
@@ -219,6 +239,60 @@ $color-fondo: #f2f2f2;
   }
 }
 
-.barra-navegacion {
-  animation: entrada-navbar 0.7s ease-out;
+// 👑 Modo Vegeta
+.modo-vegeta {
+  background-color: $color-negro;
+  color: white;
+}
+
+.modo-vegeta .barra-navegacion {
+  background-color: $color-vegeta;
+  border-bottom: 4px solid $color-goku;
+}
+
+.modo-vegeta .tarjeta {
+  background-color: #1e1e1e;
+  color: white;
+  box-shadow: 0 0 20px $color-vegeta;
+}
+
+.modo-vegeta .boton {
+  background-color: $color-vegeta;
+  color: white;
+}
+
+.modo-vegeta .boton:hover {
+  background-color: $color-goku;
+  box-shadow: 0 0 10px $color-goku;
+}
+
+.boton-modo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  background-color: $color-vegeta;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px $color-vegeta;
+
+  &:hover {
+    background-color: $color-goku;
+    box-shadow: 0 0 10px $color-goku;
+  }
+}
+
+.img-vegeta {
+  display: none;
+  max-height: 250px;
+  margin-top: 2rem;
+}
+
+.modo-vegeta .img-vegeta {
+  display: block;
 }
