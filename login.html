@@ -5,10 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Registro Namekusein - Saiyan CSS</title>
   <link rel="stylesheet" href="sayan.css" />
+  <style>
+    /* Aura verde/morado detrás de Piccolo */
+    .aura-piccolo {
+      position: absolute;
+      background: radial-gradient(circle at center, #4caf50, #2e1a47);
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      z-index: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.8;
+      box-shadow: 0 0 25px #4caf50;
+    }
+  </style>
 </head>
 <body class="cuerpo-pagina">
 
-  <!--  Navbar -->
+  <!-- 🔝 Navbar -->
   <nav class="barra-navegacion">
     <div class="barra-logo">Saiyan CSS</div>
     <div class="barra-enlaces">
@@ -16,9 +32,10 @@
     </div>
   </nav>
 
+  <!-- 📋 Contenedor -->
   <main class="contenedor">
 
-    <!-- Encabezado -->
+    <!-- 🏷️ Título y badge -->
     <div class="tarjeta tarjeta-goku">
       <h1 class="titulo-tarjeta">
         Entrenamiento con Piccolo
@@ -29,82 +46,71 @@
       </p>
     </div>
 
-    <!--  Alerta -->
-    <div id="alerta-exito" class="alerta alerta-exito oculto">
+    <!-- 📣 Alerta -->
+    <div id="alerta-exito" class="alerta alerta-exito" style="display: none;">
       ¡Estás listo! Tu entrenamiento con Piccolo comienza ahora.
     </div>
 
-    <!--  Sección de formulario con imagen -->
-    <section class="fila">
-
-      <!--  Formulario compacto -->
+    <!-- 🧾 Formulario + Imagen -->
+    <div class="fila">
+      <!-- 📝 Formulario -->
       <div class="columna">
-        <form class="formulario sombra-saiyan redondeado fondo-piccolo margen-2" onsubmit="return mostrarAlerta()">
-          <h2 class="titulo-tarjeta txt-goku">Formulario de Entrenamiento</h2>
-
+        <form class="formulario" onsubmit="return mostrarAlerta()">
           <div class="grupo-formulario">
             <label for="nombre" class="etiqueta-formulario">Nombre</label>
-            <input type="text" id="nombre" class="entrada-formulario txt-chico" placeholder="Ej. Dende">
+            <input type="text" id="nombre" class="entrada-formulario" placeholder="Ej. Dende">
           </div>
 
           <div class="grupo-formulario">
             <label for="email" class="etiqueta-formulario">Correo Electrónico</label>
-            <input type="email" id="email" class="entrada-formulario txt-chico" placeholder="namek@kami.com">
+            <input type="email" id="email" class="entrada-formulario" placeholder="namek@kami.com">
           </div>
 
           <div class="grupo-formulario">
             <label for="nivel" class="etiqueta-formulario">Disciplina</label>
-            <select id="nivel" class="seleccion-formulario txt-chico">
+            <select id="nivel" class="seleccion-formulario">
               <option>Novato</option>
               <option>Guardián</option>
               <option>Guerrero Namek</option>
             </select>
           </div>
 
-          <button type="submit" class="boton transformado  boton-mediano" id="btn-transformar">
-            Unirme a Piccolo
-          </button>
+          <button type="submit" class="boton boton-piccolo" id="btn-transformar">Unirme a Piccolo</button>
         </form>
       </div>
 
-   
-      <div class="columna text-center">
-        <img src="img/piccolo.jpeg" alt="Piccolo" style="max-height: 400px; width: 400px; margin-top: 2rem;" />
+      <!-- 📷 Imagen con aura -->
+      <div class="columna text-center" style="position: relative;">
+        <div class="aura-piccolo"></div>
+        <img src="img/piccolo.jpeg" alt="Piccolo" style="max-height: 360px; position: relative; z-index: 1;">
       </div>
-
-    </section>
+    </div>
   </main>
 
-  
-  <!--  Script de alerta y modo Vegeta -->
+  <!-- 🧠 Script de alerta y modo Vegeta -->
   <script>
     function mostrarAlerta() {
       const alerta = document.getElementById('alerta-exito');
       const btn = document.getElementById('btn-transformar');
 
-      alerta.classList.remove("oculto");
-      btn.classList.add("transformado");
+      alerta.style.display = 'block';
+      btn.classList.add('transformado');
 
       setTimeout(() => {
-        alerta.classList.add("oculto");
-        btn.classList.remove("transformado");
+        alerta.style.display = 'none';
+        btn.classList.remove('transformado');
       }, 3000);
 
-      return false; // evita recarga
+      return false; // evita que recargue
     }
 
-    // Aplicar modo Vegeta al cargar
+    // modo Vegeta persistente
     window.addEventListener("DOMContentLoaded", () => {
       if (localStorage.getItem("modo") === "vegeta") {
         document.body.classList.add("modo-vegeta");
       }
     });
-  </script>
 
-  <!-- 🟦 Botón flotante de modo -->
-  <button class="boton-modo" onclick="activarModoVegeta()">Modo Vegeta 🟦</button>
-
-  <script>
     function activarModoVegeta() {
       const body = document.body;
       const modoActivo = body.classList.toggle("modo-vegeta");
@@ -115,6 +121,9 @@
       }
     }
   </script>
+
+  <!-- 🟦 Botón flotante de modo -->
+  <button class="boton-modo" onclick="activarModoVegeta()">Modo Vegeta 🟦</button>
 
 </body>
 </html>

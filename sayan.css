@@ -465,6 +465,20 @@ body:not(.modo-vegeta) .img-goku {
   display: none;
 }
 
+.aura-piccolo {
+  position: absolute;
+  background: radial-gradient(circle at center, #4caf50, #2e1a47);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  box-shadow: 0 0 25px #4caf50;
+}
+
 .fondo-goku {
   background-color: #f27d0c;
   color: white;
@@ -488,11 +502,6 @@ body:not(.modo-vegeta) .img-goku {
 .fondo-saiyan {
   background-color: #fdd835;
   color: black;
-}
-
-.fondo-piccolo-dark {
-  background: linear-gradient(to right, #2e1a47, #4caf50);
-  color: white;
 }
 
 /*# sourceMappingURL=sayan.css.map */
