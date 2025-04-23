@@ -490,4 +490,9 @@ body:not(.modo-vegeta) .img-goku {
   color: black;
 }
 
+.fondo-piccolo-dark {
+  background: linear-gradient(to right, #2e1a47, #4caf50);
+  color: white;
+}
+
 /*# sourceMappingURL=sayan.css.map */

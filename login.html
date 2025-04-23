@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Registro Namekusein - Saiyan CSS</title>
+  <title>Entrenamiento con Piccolo</title>
   <link rel="stylesheet" href="sayan.css" />
 </head>
-<body class="cuerpo-pagina">
+<body class="cuerpo-pagina fondo-piccolo-dark">
 
   <!--  Navbar -->
   <nav class="barra-navegacion">
@@ -16,104 +16,72 @@
     </div>
   </nav>
 
-  <main class="contenedor">
-
-    <!-- Encabezado -->
-    <div class="tarjeta tarjeta-goku">
-      <h1 class="titulo-tarjeta">
-        Entrenamiento con Piccolo
-        <span class="insignia insignia-piccolo">Namekusein</span>
-      </h1>
-      <p class="cuerpo-tarjeta">
-        Registrate para comenzar el entrenamiento estratégico y disciplinado de un guerrero Namek.
-      </p>
-    </div>
-
-    <!--  Alerta -->
-    <div id="alerta-exito" class="alerta alerta-exito oculto">
-      ¡Estás listo! Tu entrenamiento con Piccolo comienza ahora.
-    </div>
-
-    <!--  Sección de formulario con imagen -->
-    <section class="fila">
-
-      <!--  Formulario compacto -->
-      <div class="columna">
-        <form class="formulario sombra-saiyan redondeado fondo-piccolo margen-2" onsubmit="return mostrarAlerta()">
-          <h2 class="titulo-tarjeta txt-goku">Formulario de Entrenamiento</h2>
-
-          <div class="grupo-formulario">
-            <label for="nombre" class="etiqueta-formulario">Nombre</label>
-            <input type="text" id="nombre" class="entrada-formulario txt-chico" placeholder="Ej. Dende">
-          </div>
-
-          <div class="grupo-formulario">
-            <label for="email" class="etiqueta-formulario">Correo Electrónico</label>
-            <input type="email" id="email" class="entrada-formulario txt-chico" placeholder="namek@kami.com">
-          </div>
-
-          <div class="grupo-formulario">
-            <label for="nivel" class="etiqueta-formulario">Disciplina</label>
-            <select id="nivel" class="seleccion-formulario txt-chico">
-              <option>Novato</option>
-              <option>Guardián</option>
-              <option>Guerrero Namek</option>
-            </select>
-          </div>
-
-          <button type="submit" class="boton transformado  boton-mediano" id="btn-transformar">
-            Unirme a Piccolo
-          </button>
-        </form>
+  <!--  Layout principal -->
+  <main class="contenedor fila" style="align-items: center; min-height: 80vh;">
+    
+    <!--  Formulario lado izquierdo -->
+    <div class="columna contenedor-pequeño">
+      <div class="tarjeta tarjeta-goku sombra-saiyan">
+        <h1 class="titulo-tarjeta txt-piccolo">
+          Entrenamiento Namekusein <span class="insignia insignia-piccolo">Piccolo</span>
+        </h1>
+        <p class="cuerpo-tarjeta">Regístrate para comenzar el entrenamiento estratégico con el maestro del Makankosappo.</p>
       </div>
 
-   
-      <div class="columna text-center">
-        <img src="img/piccolo.jpeg" alt="Piccolo" style="max-height: 400px; width: 400px; margin-top: 2rem;" />
+      <div class="alerta alerta-exito oculto" id="alerta-exito">
+        ¡Tu entrenamiento con Piccolo ha comenzado!
       </div>
 
-    </section>
+      <form class="formulario" onsubmit="return mostrarAlerta()">
+        <div class="grupo-formulario">
+          <label class="etiqueta-formulario">Nombre</label>
+          <input type="text" class="entrada-formulario" placeholder="Ej. Dende">
+        </div>
+
+        <div class="grupo-formulario">
+          <label class="etiqueta-formulario">Correo Electrónico</label>
+          <input type="email" class="entrada-formulario" placeholder="namek@kami.com">
+        </div>
+
+        <div class="grupo-formulario">
+          <label class="etiqueta-formulario">Nivel de disciplina</label>
+          <select class="seleccion-formulario">
+            <option>Principiante</option>
+            <option>Guardián de la Tierra</option>
+            <option>Guerrero Namekusein</option>
+          </select>
+        </div>
+
+        <button type="submit" class="boton boton-piccolo boton-grande" id="btn-transformar">¡Unirme a Piccolo!</button>
+      </form>
+    </div>
+
+    <!-- 📷 Imagen lado derecho -->
+    <div class="columna text-center">
+      <img src="img/piccolo.jpeg" alt="Piccolo modo entrenamiento" style="max-height: 400px;">
+    </div>
   </main>
 
-  
-  <!--  Script de alerta y modo Vegeta -->
+  <!--  Script -->
   <script>
     function mostrarAlerta() {
       const alerta = document.getElementById('alerta-exito');
       const btn = document.getElementById('btn-transformar');
-
-      alerta.classList.remove("oculto");
-      btn.classList.add("transformado");
-
+      alerta.classList.remove('oculto');
+      btn.classList.add('transformado');
       setTimeout(() => {
-        alerta.classList.add("oculto");
-        btn.classList.remove("transformado");
+        alerta.classList.add('oculto');
+        btn.classList.remove('transformado');
       }, 3000);
-
-      return false; // evita recarga
+      return false;
     }
 
-    // Aplicar modo Vegeta al cargar
+    // Persistencia de modo Vegeta
     window.addEventListener("DOMContentLoaded", () => {
       if (localStorage.getItem("modo") === "vegeta") {
         document.body.classList.add("modo-vegeta");
       }
     });
-  </script>
-
-  <!-- 🟦 Botón flotante de modo -->
-  <button class="boton-modo" onclick="activarModoVegeta()">Modo Vegeta 🟦</button>
-
-  <script>
-    function activarModoVegeta() {
-      const body = document.body;
-      const modoActivo = body.classList.toggle("modo-vegeta");
-      if (modoActivo) {
-        localStorage.setItem("modo", "vegeta");
-      } else {
-        localStorage.removeItem("modo");
-      }
-    }
   </script>
 
 </body>
