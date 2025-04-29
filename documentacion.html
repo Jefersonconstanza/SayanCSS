@@ -7,75 +7,97 @@
   <link rel="stylesheet" href="sayan.css" />
 </head>
 <body class="cuerpo-pagina">
-
-  <!--  Navbar -->
+  <!-- Navbar -->
   <nav class="barra-navegacion">
     <div class="barra-logo">Saiyan CSS</div>
     <div class="barra-enlaces">
       <a href="index.html">Inicio</a>
     </div>
   </nav>
-
+  
   <main class="contenedor">
-
     <!-- Título -->
     <section class="tarjeta tarjeta-goku">
       <h1 class="titulo-tarjeta">📘 Documentación de Saiyan CSS</h1>
-      <p class="cuerpo-tarjeta">Esta página incluye ejemplos interactivos y explicaciones de cómo usar los estilos personalizados de tu librería <strong>Saiyan CSS</strong>, inspirada en el universo de Dragon Ball.</p>
+      <p class="cuerpo-tarjeta">
+        Esta página incluye ejemplos interactivos y explicaciones de cómo usar los estilos personalizados de tu librería 
+        <strong>Saiyan CSS</strong>, inspirada en el universo de Dragon Ball.
+      </p>
     </section>
 
-    <!--  BOTONES -->
+    <!-- BOTONES -->
     <section class="tarjeta">
       <h2 class="titulo-tarjeta">🔘 Botones personalizados</h2>
-      <p class="cuerpo-tarjeta">Usá la clase <code>.boton</code> junto con <code>.boton-goku</code>, <code>.boton-vegeta</code>, etc., para aplicar estilos según el personaje.</p>
+      <p class="cuerpo-tarjeta">
+        Usá la clase <code>.boton</code> junto con <code>.boton-goku</code>, <code>.boton-vegeta</code>, etc.,
+        para aplicar estilos según el personaje.
+      </p>
       <button class="boton boton-goku">Botón Goku</button>
       <button class="boton boton-vegeta">Botón Vegeta</button>
       <button class="boton boton-freeza">Botón Freeza</button>
       <button class="boton boton-piccolo">Botón Piccolo</button>
       <pre><code>&lt;button class="boton boton-goku"&gt;Botón Goku&lt;/button&gt;</code></pre>
     </section>
-    <!--  MODO VEGETA -->
+
+    <!-- MODO VEGETA (Modo Oscuro) -->
     <section class="tarjeta">
       <h2 class="titulo-tarjeta">🌑 Modo Vegeta (Modo Oscuro)</h2>
       <p class="cuerpo-tarjeta">
-        Saiyan CSS incluye un <strong>modo oscuro personalizado</strong> inspirado en Vegeta. Se activa con un solo clic y modifica colores de fondo, textos, botones y tarjetas para que toda la interfaz cambie de estilo.
+        Saiyan CSS incluye un <strong>modo oscuro personalizado</strong> inspirado en Vegeta.
+        Cuando se activa, se modifican colores de fondo, textos, botones y tarjetas, y se muestra la imagen de Vegeta en lugar de Gokú.
       </p>
-
       <h3 class="titulo-tarjeta">🧠 ¿Cómo funciona?</h3>
       <ul class="cuerpo-tarjeta">
-        <li>El botón con la clase <code>.boton-modo</code> activa el modo oscuro.</li>
-        <li>Agrega la clase <code>.modo-vegeta</code> al <code>&lt;body&gt;</code>.</li>
-        <li>Se guarda automáticamente en <code>localStorage</code>, por lo que permanece activado al recargar la página.</li>
+        <li>Al pulsar el botón "Modo Vegeta", se agrega la clase <code>.modo-vegeta</code> al <code>&lt;body&gt;</code>.</li>
+        <li>Se guarda en <code>localStorage</code> para que el modo persista al recargar la página.</li>
       </ul>
-
-      <h3 class="titulo-tarjeta">📌 ¿Cómo se usa?</h3>
+      <h3 class="titulo-tarjeta">📌 Ejemplo de uso</h3>
       <pre><code>
-      &lt;button class="boton-modo" onclick="activarModoVegeta()"&gt;
-        Modo Vegeta 🟦
-      &lt;/button&gt;
+&lt;button class="boton-modo" onclick="activarModoVegeta()"&gt;
+  Modo Vegeta
+&lt;/button&gt;
       </code></pre>
-
-      <p class="cuerpo-tarjeta">
-        El modo Vegeta cambia los estilos de la barra de navegación, tarjetas, fondo general, colores de botones y muestra una imagen de Vegeta en lugar de Goku.
-      </p>
-
-      <button class="boton boton-vegeta boton-mediano" onclick="activarModoVegeta()">¡Probar modo Vegeta!</button>
+      <button class="boton boton-vegeta boton-mediano" onclick="activarModoVegeta()">¡Probar Modo Vegeta!</button>
     </section>
 
-    <!--  ALERTAS -->
+    <!-- MODO GOKÚ (Modo Claro) -->
+    <section class="tarjeta">
+      <h2 class="titulo-tarjeta">🌞 Modo Gokú (Modo Claro)</h2>
+      <p class="cuerpo-tarjeta">
+        El <strong>Modo Gokú</strong> restaura la interfaz a su estética original inspirada en Gokú,
+        eliminando la clase <code>.modo-vegeta</code> del <code>&lt;body&gt;</code>.
+      </p>
+      <h3 class="titulo-tarjeta">🧠 ¿Cómo funciona?</h3>
+      <ul class="cuerpo-tarjeta">
+        <li>Al pulsar el botón "Modo Gokú", se remueve la clase <code>.modo-vegeta</code> del <code>&lt;body&gt;</code>.</li>
+        <li>Esto restaura los estilos predeterminados y elimina la configuración guardada en <code>localStorage</code>.</li>
+      </ul>
+      <h3 class="titulo-tarjeta">📌 Ejemplo de uso</h3>
+      <pre><code>
+&lt;button class="boton-modo" onclick="activarModoGoku()"&gt;
+  Modo Gokú
+&lt;/button&gt;
+      </code></pre>
+      <button class="boton boton-goku boton-mediano" onclick="activarModoGoku()">¡Probar Modo Gokú!</button>
+    </section>
+
+    <!-- ALERTAS -->
     <section class="tarjeta">
       <h2 class="titulo-tarjeta">📣 Alertas temáticas</h2>
-      <p class="cuerpo-tarjeta">Las alertas se aplican con <code>.alerta</code> y variantes como <code>.alerta-exito</code> o <code>.alerta-peligro</code> para distintos tipos de mensajes.</p>
+      <p class="cuerpo-tarjeta">
+        Las alertas se activan con la clase <code>.alerta</code> y variantes como <code>.alerta-exito</code> o <code>.alerta-peligro</code> para distintos mensajes.
+      </p>
       <div class="alerta alerta-exito">¡Esta es una alerta de éxito Saiyajin!</div>
       <div class="alerta alerta-peligro">¡Frieza se acerca! Esto es una alerta de peligro.</div>
-
       <pre><code>&lt;div class="alerta alerta-exito"&gt;¡Mensaje exitoso!&lt;/div&gt;</code></pre>
     </section>
 
-    <!--  FORMULARIO -->
+    <!-- FORMULARIOS -->
     <section class="tarjeta">
       <h2 class="titulo-tarjeta">📋 Formularios estilizados</h2>
-      <p class="cuerpo-tarjeta">Estilizá tus formularios usando <code>.formulario</code>, <code>.entrada-formulario</code>, <code>.seleccion-formulario</code>, y <code>.etiqueta-formulario</code>.</p>
+      <p class="cuerpo-tarjeta">
+        Estilizá tus formularios usando las clases <code>.formulario</code>, <code>.entrada-formulario</code>, <code>.seleccion-formulario</code> y <code>.etiqueta-formulario</code>.
+      </p>
       <form class="formulario">
         <div class="grupo-formulario">
           <label class="etiqueta-formulario">Nombre</label>
@@ -90,98 +112,97 @@
           </select>
         </div>
       </form>
-
       <pre><code>&lt;form class="formulario"&gt;
   &lt;input type="text" class="entrada-formulario"&gt;
 &lt;/form&gt;</code></pre>
     </section>
 
-    <!--  BADGES -->
+    <!-- INSIGNIAS (BADGES) -->
     <section class="tarjeta">
       <h2 class="titulo-tarjeta">🏷️ Insignias (Badges)</h2>
-      <p class="cuerpo-tarjeta">Usá <code>.insignia</code> junto a <code>.insignia-goku</code>, <code>.insignia-vegeta</code>, etc., para mostrar etiquetas visuales.</p>
+      <p class="cuerpo-tarjeta">
+        Utilizá la clase <code>.insignia</code> junto a variantes como <code>.insignia-goku</code>, <code>.insignia-vegeta</code>, etc., para mostrar etiquetas visuales.
+      </p>
       <span class="insignia insignia-goku">Saiyajin</span>
       <span class="insignia insignia-vegeta">Orgullo</span>
       <span class="insignia insignia-piccolo">Namekusein</span>
       <span class="insignia insignia-frieza">Villano</span>
-
-
       <pre><code>&lt;span class="insignia insignia-goku"&gt;Saiyajin&lt;/span&gt;</code></pre>
     </section>
 
-    <!--  ANIMACIONES -->
+    <!-- ANIMACIÓN DE TRANSFORMACIÓN -->
     <section class="tarjeta">
       <h2 class="titulo-tarjeta">⚡ Animación de transformación</h2>
-      <p class="cuerpo-tarjeta">Agregá la clase <code>.transformado</code> a cualquier botón o elemento para aplicar una animación de "carga de ki".</p>
+      <p class="cuerpo-tarjeta">
+        Agregá la clase <code>.transformado</code> a cualquier elemento para aplicar una animación de "carga de ki".
+      </p>
       <button onclick="this.classList.add('transformado')" class="boton boton-goku">¡Transformarse!</button>
-
       <pre><code>&lt;button class="boton transformado"&gt;¡Transformarse!&lt;/button&gt;</code></pre>
     </section>
 
-
-    <!--  UTILITARIAS -->
-<section class="tarjeta">
-  <h2 class="titulo-tarjeta">🛠️ Clases Utilitarias</h2>
-  <p class="cuerpo-tarjeta">Estas clases permiten modificar rápidamente tamaño, texto, márgenes, sombras, colores y más.</p>
-
-  <!--  Tamaño de texto -->
-  <div class="margen-2">
-    <p class="txt-grande">Texto grande (.txt-grande)</p>
-    <p class="txt-mediano">Texto mediano (.txt-mediano)</p>
-    <p class="txt-chico">Texto chico (.txt-chico)</p>
-  </div>
-
-  <!--  Colores y estilos de texto -->
-  <div class="margen-2">
-    <p class="txt-bold txt-goku">Texto Goku en negrita (.txt-goku .txt-bold)</p>
-    <p class="txt-italic txt-vegeta">Texto Vegeta en itálica (.txt-vegeta .txt-italic)</p>
-    <p class="txt-piccolo">Texto Piccolo (.txt-piccolo)</p>
-  </div>
-
-  <!--  Márgenes y sombras -->
-  <div class="margen-3 sombra-saiyan redondeado fondo-saiyan">
-    <p>Este bloque tiene margen, sombra Saiyan y borde redondeado.</p>
-    <p><code>.margen-3 .sombra-saiyan .redondeado .fondo-saiyan</code></p>
-  </div>
-
-  <!-- Contenedores -->
-  <p>Existen tres tipos de contenedor: <code>.contenedor</code>, <code>.contenedor-pequeño</code> y <code>.contenedor-grande</code>.</p>
-
-  <div class="contenedor-pequeño fondo-goku redondeado margen-2">
-    <p>Contenedor pequeño personalizado (.contenedor-pequeño)</p>
-  </div>
-
-  <div class="contenedor-grande fondo-vegeta redondeado margen-2">
-    <p>Contenedor grande personalizado (.contenedor-grande)</p>
-  </div>
-
-  <!-- Ocultar elementos -->
-  <div class="alerta alerta-info oculto" id="alerta-secreta">
-    ¡Soy un mensaje oculto con .oculto!
-  </div>
-  <button class="boton boton-piccolo" onclick="document.getElementById('alerta-secreta').style.display='block'">
-    Mostrar alerta oculta
-  </button>
-</section>
-
+    <!-- CLASES UTILITARIAS -->
+    <section class="tarjeta">
+      <h2 class="titulo-tarjeta">🛠️ Clases Utilitarias</h2>
+      <p class="cuerpo-tarjeta">
+        Estas clases permiten modificar rápidamente tamaño, texto, márgenes, sombras, colores y más.
+      </p>
+      <div class="margen-2">
+        <p class="txt-grande">Texto grande (.txt-grande)</p>
+        <p class="txt-mediano">Texto mediano (.txt-mediano)</p>
+        <p class="txt-chico">Texto chico (.txt-chico)</p>
+      </div>
+      <div class="margen-2">
+        <p class="txt-bold txt-goku">Texto Goku en negrita (.txt-goku .txt-bold)</p>
+        <p class="txt-italic txt-vegeta">Texto Vegeta en itálica (.txt-vegeta .txt-italic)</p>
+        <p class="txt-piccolo">Texto Piccolo (.txt-piccolo)</p>
+      </div>
+      <div class="margen-3 sombra-saiyan redondeado fondo-saiyan">
+        <p>Este bloque tiene margen, sombra Saiyan y borde redondeado.</p>
+        <p><code>.margen-3 .sombra-saiyan .redondeado .fondo-saiyan</code></p>
+      </div>
+      <p>Existen tres tipos de contenedor: <code>.contenedor</code>, <code>.contenedor-pequeño</code> y <code>.contenedor-grande</code>.</p>
+      <div class="contenedor-pequeño fondo-goku redondeado margen-2">
+        <p>Contenedor pequeño personalizado (.contenedor-pequeño)</p>
+      </div>
+      <div class="contenedor-grande fondo-vegeta redondeado margen-2">
+        <p>Contenedor grande personalizado (.contenedor-grande)</p>
+      </div>
+      <div class="alerta alerta-info oculto" id="alerta-secreta">
+        ¡Soy un mensaje oculto con .oculto!
+      </div>
+      <button class="boton boton-piccolo" onclick="document.getElementById('alerta-secreta').style.display='block'">
+        Mostrar alerta oculta
+      </button>
+    </section>
   </main>
 
-  <!--  Modo Vegeta -->
-  <button class="boton-modo" onclick="activarModoVegeta()">Modo Vegeta 🟦</button>
+  <!-- Botón fijo de Toggle (Siempre visible en la esquina inferior derecha) -->
+  <button class="boton-modo" onclick="activarModo()">
+    <span class="label vegeta">Modo Vegeta</span>
+    <span class="label goku">Modo Gokú</span>
+    <div class="toggle-indicator"></div>
+  </button>
 
-  <!-- Script de modo Vegeta persistente -->
   <script>
-    function activarModoVegeta() {
+    function activarModo() {
       const body = document.body;
       const modoActivo = body.classList.toggle("modo-vegeta");
-
       if (modoActivo) {
         localStorage.setItem("modo", "vegeta");
       } else {
         localStorage.removeItem("modo");
       }
     }
-
+    function activarModoVegeta() {
+      // Botón de prueba: activa el modo Vegeta
+      document.body.classList.add("modo-vegeta");
+      localStorage.setItem("modo", "vegeta");
+    }
+    function activarModoGoku() {
+      // Botón de prueba: activa el modo Gokú
+      document.body.classList.remove("modo-vegeta");
+      localStorage.removeItem("modo");
+    }
     window.addEventListener("DOMContentLoaded", () => {
       if (localStorage.getItem("modo") === "vegeta") {
         document.body.classList.add("modo-vegeta");

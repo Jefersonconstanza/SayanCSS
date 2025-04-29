@@ -76,12 +76,15 @@
     </section>
   </main>
 
-  <!--  Botón Modo Vegeta -->
-  <button class="boton-modo" onclick="activarModoVegeta()">Modo Vegeta 🟦</button>
+  <!-- Botón fijo de Toggle (Siempre visible en la esquina inferior derecha) -->
+  <button class="boton-modo" onclick="activarModo()">
+    <span class="label vegeta">Modo Vegeta</span>
+    <span class="label goku">Modo Gokú</span>
+    <div class="toggle-indicator"></div>
+  </button>
 
-  <!--  Script modo Vegeta -->
   <script>
-    function activarModoVegeta() {
+    function activarModo() {
       const body = document.body;
       const modoActivo = body.classList.toggle("modo-vegeta");
       if (modoActivo) {
@@ -90,13 +93,21 @@
         localStorage.removeItem("modo");
       }
     }
-
+    function activarModoVegeta() {
+      // Botón de prueba: activa el modo Vegeta
+      document.body.classList.add("modo-vegeta");
+      localStorage.setItem("modo", "vegeta");
+    }
+    function activarModoGoku() {
+      // Botón de prueba: activa el modo Gokú
+      document.body.classList.remove("modo-vegeta");
+      localStorage.removeItem("modo");
+    }
     window.addEventListener("DOMContentLoaded", () => {
       if (localStorage.getItem("modo") === "vegeta") {
         document.body.classList.add("modo-vegeta");
       }
     });
   </script>
-
 </body>
 </html>

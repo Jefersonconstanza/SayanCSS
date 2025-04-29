@@ -36,12 +36,12 @@
 
       <!-- Imagen Goku -->
       <div class="img-goku">
-        <img src="img/goku.jpg" alt="Goku en la nube voladora" />
+        <img src="img/goku.png" alt="Goku en la nube voladora" />
       </div>
 
       <!-- Imagen Vegeta -->
       <div class="img-vegeta">
-        <img src="img/vegeta2.jpg" alt="Vegeta Modo Saiyan" />
+        <img src="img/vegeta.png" alt="Vegeta Modo Saiyan" />
       </div>
     </section>
 
@@ -74,26 +74,31 @@
     </section>
   </main>
 
-  <!-- modo Vegeta -->
-  <button class="boton-modo" onclick="activarModoVegeta()">Modo Vegeta 🟦</button>
+<!-- Botón de Toggle para Modo Vegeta / Modo Gokú -->
+<button class="boton-modo" onclick="activarModo()">
+  <span class="label vegeta">Modo Vegeta</span>
+  <span class="label goku">Modo Gokú</span>
+  <div class="toggle-indicator"></div>
+</button>
 
-  <script>
-    function activarModoVegeta() {
-      const body = document.body;
-      const modoActivo = body.classList.toggle("modo-vegeta");
-      if (modoActivo) {
-        localStorage.setItem("modo", "vegeta");
-      } else {
-        localStorage.removeItem("modo");
-      }
+<script>
+  function activarModo() {
+    const body = document.body;
+    // Alterna la clase "modo-vegeta" en el body
+    const modoActivo = body.classList.toggle("modo-vegeta");
+    if (modoActivo) {
+      localStorage.setItem("modo", "vegeta");
+    } else {
+      localStorage.removeItem("modo");
     }
+  }
 
-    // Al cargar la página, aplicar modo Vegeta si está guardado
-    window.addEventListener("DOMContentLoaded", () => {
-      if (localStorage.getItem("modo") === "vegeta") {
-        document.body.classList.add("modo-vegeta");
-      }
-    });
-  </script>
+  // Al cargar la página, aplica el modo si está guardado en localStorage
+  window.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("modo") === "vegeta") {
+      document.body.classList.add("modo-vegeta");
+    }
+  });
+</script>
 </body>
 </html>

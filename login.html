@@ -5,22 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Registro Namekusein - Saiyan CSS</title>
   <link rel="stylesheet" href="sayan.css" />
-  <style>
-    /* Aura verde/morado detrás de Piccolo */
-    .aura-piccolo {
-      position: absolute;
-      background: radial-gradient(circle at center, #4caf50, #2e1a47);
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      z-index: 0;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0.8;
-      box-shadow: 0 0 25px #4caf50;
-    }
-  </style>
+  <!-- Se elimina el estilo inline del aura; se controla en SCSS -->
 </head>
 <body class="cuerpo-pagina">
 
@@ -34,7 +19,6 @@
 
   <!-- 📋 Contenedor -->
   <main class="contenedor">
-
     <!-- 🏷️ Título y badge -->
     <div class="tarjeta tarjeta-goku">
       <h1 class="titulo-tarjeta">
@@ -79,10 +63,12 @@
         </form>
       </div>
 
-      <!-- 📷 Imagen con aura -->
+      <!-- 📷 Imagen con aura (Ambiente para Piccolo) -->
       <div class="columna text-center" style="position: relative;">
+        <!-- El aura se desplegará mediante SCSS en .aura-piccolo -->
         <div class="aura-piccolo"></div>
-        <img src="img/picoro2.png" alt="Piccolo" class="redondeado" style="max-height: 360px; position: relative; z-index: 1;">
+        <!-- Se agregó la clase .img-picoro para mejor control -->
+        <img src="img/picoro2.png" alt="Piccolo" class="redondeado img-picoro">
       </div>
     </div>
   </main>
@@ -104,14 +90,34 @@
       return false; // evita que recargue
     }
 
-    // modo Vegeta persistente
+    // Modo Vegeta persistente
     window.addEventListener("DOMContentLoaded", () => {
       if (localStorage.getItem("modo") === "vegeta") {
         document.body.classList.add("modo-vegeta");
       }
     });
 
+    // Alternar modo Vegeta (toggle)
     function activarModoVegeta() {
+      const body = document.body;
+      body.classList.toggle("modo-vegeta");
+      if (body.classList.contains("modo-vegeta")) {
+        localStorage.setItem("modo", "vegeta");
+      } else {
+        localStorage.removeItem("modo");
+      }
+    }
+  </script>
+
+  <!-- Botón fijo de Toggle (Siempre visible en la esquina inferior derecha) -->
+  <button class="boton-modo" onclick="activarModo()">
+    <span class="label vegeta">Modo Vegeta</span>
+    <span class="label goku">Modo Gokú</span>
+    <div class="toggle-indicator"></div>
+  </button>
+
+  <script>
+    function activarModo() {
       const body = document.body;
       const modoActivo = body.classList.toggle("modo-vegeta");
       if (modoActivo) {
@@ -120,10 +126,21 @@
         localStorage.removeItem("modo");
       }
     }
+    function activarModoVegeta() {
+      // Botón de prueba: activa el modo Vegeta
+      document.body.classList.add("modo-vegeta");
+      localStorage.setItem("modo", "vegeta");
+    }
+    function activarModoGoku() {
+      // Botón de prueba: activa el modo Gokú
+      document.body.classList.remove("modo-vegeta");
+      localStorage.removeItem("modo");
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("modo") === "vegeta") {
+        document.body.classList.add("modo-vegeta");
+      }
+    });
   </script>
-
-  <!-- 🟦 Botón flotante de modo -->
-  <button class="boton-modo" onclick="activarModoVegeta()">Modo Vegeta 🟦</button>
-
 </body>
 </html>
