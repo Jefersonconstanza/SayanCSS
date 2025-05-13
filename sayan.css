@@ -481,13 +481,14 @@ body.modo-vegeta .img-vegeta {
 /* =========================================
    SISTEMA DE FILAS Y COLUMNAS
 ========================================= */
-.fila {
+.fila, .fila-reversa {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -0.5rem;
+  align-items: stretch;
 }
 
-.columna {
+.columna, .columna-reversa {
   flex: 1;
   min-width: 250px;
   padding: 0.5rem;
@@ -503,6 +504,18 @@ body.modo-vegeta .img-vegeta {
   max-width: 1400px;
   margin: auto;
   padding: 2rem;
+}
+
+.fila-reversa {
+  flex-direction: row-reverse;
+}
+
+.columna-reversa {
+  flex-direction: column-reverse;
+}
+
+.full-tamaño {
+  height: 100%;
 }
 
 /* =========================================
@@ -710,7 +723,7 @@ body.modo-vegeta .img-vegeta {
     flex-direction: column;
     text-align: center;
   }
-  .fila {
+  .fila, .fila-reversa {
     flex-direction: column;
   }
   img {

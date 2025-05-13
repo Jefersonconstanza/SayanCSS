@@ -509,6 +509,7 @@ body.modo-vegeta {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -0.5rem;
+  align-items: stretch;
 }
 .columna {
   flex: 1;
@@ -524,6 +525,17 @@ body.modo-vegeta {
   max-width: 1400px;
   margin: auto;
   padding: $margin-2;
+}
+.fila-reversa {
+  @extend .fila;
+  flex-direction: row-reverse;
+}
+.columna-reversa {
+  @extend .columna;
+  flex-direction: column-reverse;
+}
+.full-tamaño{
+  height: 100%;
 }
 
 /* =========================================
