@@ -606,6 +606,11 @@ body.modo-vegeta .img-vegeta {
   color: black;
 }
 
+.fondo-twt {
+  background-color: #1e1e1e;
+  color: white;
+}
+
 /* =========================================
    EFECTO AURA PARA PICCOLO (Registro/Login)
    Simula energía Ki saliendo del cuerpo con efecto dinámico
